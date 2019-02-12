@@ -9,7 +9,7 @@ pipeline {
     stage('error') {
       steps {
         sh '''echo "hello"
-apt-get install git
+sudo apt-get install git
 composer install --prefer-dist'''
       }
     }
