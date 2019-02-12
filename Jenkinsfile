@@ -9,7 +9,7 @@ pipeline {
     stage('error') {
       steps {
         sh '''echo "hello"
-composer install'''
+composer install --prefer-dist'''
       }
     }
   }
