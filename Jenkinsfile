@@ -8,7 +8,8 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        sh 'composer install'
+        sh '''echo "hello"
+composer install'''
       }
     }
   }
