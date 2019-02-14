@@ -7,6 +7,9 @@ pipeline {
   }
   stages {
     stage('Build') {
+      environment {
+        HOME = '.'
+      }
       parallel {
         stage('Build') {
           steps {
