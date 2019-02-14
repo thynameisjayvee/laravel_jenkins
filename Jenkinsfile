@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         sh '''mysql --version
-systemctl start mysql
+
 '''
         sh '''mysql -u root
 CREATE DATABASE demodb;
