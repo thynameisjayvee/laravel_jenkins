@@ -1,18 +1,16 @@
 pipeline {
   agent {
     docker {
-      image 'node'
+      image 'php'
     }
 
   }
   stages {
     stage('error') {
       steps {
-        sh 'npm install'
+        sh '''php --version
+composer install --prefer-dist'''
       }
     }
-  }
-  environment {
-    HOME = '.'
   }
 }
