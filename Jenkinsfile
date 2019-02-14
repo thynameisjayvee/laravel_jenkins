@@ -15,7 +15,8 @@ php -r "if (hash_file(\'sha384\', \'composer-setup.php\') === \'48e3236262b34d30
 php composer-setup.php
 php -r "unlink(\'composer-setup.php\');"
 '''
-        sh 'apt-get install --yes zip unzip php-pclzip'
+        sh '''apt update
+apt-get install --yes zip unzip php-pclzip'''
       }
     }
     stage('Install') {
