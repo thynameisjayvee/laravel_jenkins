@@ -20,6 +20,7 @@ php -r "unlink(\'composer-setup.php\');"
       steps {
         sh '''php composer.phar install
 php artisan key:generate'''
+        sh 'apt-get install git'
       }
     }
   }
