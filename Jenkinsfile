@@ -6,7 +6,7 @@ pipeline {
         sh '''mysql --version
 
 '''
-        sh '''mysql -u root
+        sh '''/usr/bin/mysql -u root
 CREATE DATABASE demodb;
 exit'''
         sh 'composer install'
