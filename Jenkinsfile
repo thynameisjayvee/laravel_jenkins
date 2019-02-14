@@ -18,7 +18,7 @@ php -r "unlink(\'composer-setup.php\');"
     }
     stage('Install') {
       steps {
-        sh 'composer install'
+        sh 'php composer.phar'
       }
     }
   }
