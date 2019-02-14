@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       image 'php'
-      args '-u 1000'
+      args '-u 0'
     }
 
   }
