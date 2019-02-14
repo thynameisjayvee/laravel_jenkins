@@ -6,7 +6,9 @@ pipeline {
         sh '''mysql --version
 
 '''
-        sh 'mysql -u root laravelJenkinsDb'
+        sh 'mysql -u root'
+        sh 'CREATE DATABASE laravelJenkinsDb;'
+        sh 'exit'
         sh 'composer install'
         sh 'cp .env.example .env'
         sh 'php artisan key:generate'
