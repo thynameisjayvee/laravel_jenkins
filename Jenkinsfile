@@ -8,6 +8,12 @@ pipeline {
         sh 'php artisan key:generate'
       }
     }
+    stage('Node') {
+      steps {
+        sh 'npm install'
+        sh 'npm run dev'
+      }
+    }
   }
   environment {
     HOME = '.'
