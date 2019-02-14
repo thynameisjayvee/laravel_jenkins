@@ -1,7 +1,7 @@
 pipeline {
   agent {
-    docker {
-      image 'php'
+    dockerfile {
+      filename 'Dockerfile'
     }
 
   }
