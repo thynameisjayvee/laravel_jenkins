@@ -11,8 +11,8 @@ pipeline {
         sh '''mysql --version
 
 '''
-        sh '''mysql -u root --init-command=\'CREATE DATABASE laravelJenkinsDb;\'
-'''
+        sh '''systemctl start mysql
+mysql -u root --init-command=\'CREATE DATABASE laravelJenkinsDb;\''''
         sh 'composer install'
         sh 'cp .env.example .env'
         sh 'php artisan key:generate'
