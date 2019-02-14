@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'mysql --version'
+        sh 'sudo /opt/lampp/lampp startmysql'
         sh 'composer install'
         sh 'cp .env.example .env'
         sh 'php artisan key:generate'
