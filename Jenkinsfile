@@ -24,7 +24,7 @@ php composer.phar
         }
         stage('Install') {
           steps {
-            sh 'php composer.phar'
+            sh 'composer install'
           }
         }
       }
