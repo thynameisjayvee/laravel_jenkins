@@ -7,7 +7,7 @@ pipeline {
 
 '''
         sh 'mysql -u root'
-        sh 'CREATE DATABASE laravelJenkinsDb;'
+        sh 'mysql> CREATE DATABASE laravelJenkinsDb;'
         sh 'exit'
         sh 'composer install'
         sh 'cp .env.example .env'
