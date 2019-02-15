@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''git --version
+        sh '''cd docker
+git --version
 '''
         sh '''mysql --version
 
